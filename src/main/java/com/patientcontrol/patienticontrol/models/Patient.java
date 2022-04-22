@@ -1,4 +1,4 @@
-package com.patientcontrol.models;
+package com.patientcontrol.patienticontrol.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -38,7 +38,76 @@ public class Patient implements Serializable {
 	    
 	    @ManyToMany
 	    private List<Consult> consult=new  ArrayList<>();
-	    	    
-		    
-	
+
+	public UUID getId() {
+		return id;
+	}
+
+	public void setId(UUID id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getSurname() {
+		return surname;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getDate_birth() {
+		return date_birth;
+	}
+
+	public void setDate_birth(String date_birth) {
+		this.date_birth = date_birth;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getAddres() {
+		return addres;
+	}
+
+	public void setAddres(String addres) {
+		this.addres = addres;
+	}
+
+	public LocalDateTime getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(LocalDateTime registrationDate) {
+		this.registrationDate = registrationDate;
+	}
+
+	public List<Consult> getConsult() {
+		return consult;
+	}
+
+	public void setConsult(List<Consult> consult) {
+		this.consult = consult;
+	}
 }
