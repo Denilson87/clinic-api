@@ -15,7 +15,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table (name="TB_Patient")
+@Table (name="TB_PATIENTt")
 public class Patient implements Serializable {
 	  private static final long serialVersionUID =1L;	
 	    @Id
@@ -36,7 +36,7 @@ public class Patient implements Serializable {
 	    @Column(nullable = false)	    
 	    private LocalDateTime registrationDate;
 	    
-	    @ManyToMany
+	    @ManyToMany(mappedBy = "patient")
 	    private List<Consult> consult=new  ArrayList<>();
 
 	public UUID getId() {
@@ -109,5 +109,6 @@ public class Patient implements Serializable {
 
 	public void setConsult(List<Consult> consult) {
 		this.consult = consult;
+
 	}
 }
