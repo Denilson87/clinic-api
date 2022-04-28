@@ -25,7 +25,6 @@ public class PatientController {
     }
     @PostMapping
     public ResponseEntity<Object> savePatient(@RequestBody @Valid PatientDto patientDto){
-
         var patient = new Patient();
         BeanUtils.copyProperties(patientDto, patient);
         patient.setRegistrationDate(LocalDateTime.now(ZoneId.of("UTC")));
