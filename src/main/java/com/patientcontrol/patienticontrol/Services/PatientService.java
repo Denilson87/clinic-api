@@ -14,9 +14,12 @@ public class PatientService {
         this.patientRepository = patientRepository;
     }
     @Transactional
-    public Patient save(Patient parkingSpotModel) {
-        return patientRepository.save(parkingSpotModel);
+    public Patient save(Patient patient) {
+        return PatientRepository
     }
 
+//    public Patient save(Patient patient) {
+//        return patientRepository.save(patient);
+//    }
 
 }
